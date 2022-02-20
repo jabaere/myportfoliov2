@@ -68,7 +68,7 @@ function App() {
   useEffect(() => void onScroll({ target: scrollArea.current }), []);
   return (
     <CanvasContainer id="fullPage">
-      <Suspense fallback={<Loading type="cylon" color="orange" />}>
+     
         <Canvas
           camera={{ position: [0, 0, 20], fov: 15, near: 10, far: 1000 }}
           dpr={[1, 1.5]}
@@ -86,8 +86,9 @@ function App() {
         >
           <color
             attach="background"
-            args={["#121C1A"]} //'#191920'
+            args={["#1B1A17"]} //'#191920'
           />
+           <Suspense fallback={<Loading2 style={{color: 'orange', textAlign:'center'}}/>}>
           <Block factor={1.5} offset={0}>
             <Model
               modelPath="./model/scene.gltf"
@@ -119,24 +120,25 @@ function App() {
               </HtmlContentChild>
             </HtmlContent>
           </Block>
-          <Block factor={2} offset={1}>
+          <Block factor={2.5} offset={0.5}>
             <Html center portal={domContent}>
               <AboutMe />
             </Html>
           </Block>
 
-          <Block factor={3} offset={4.8} id="projects">
+          <Block factor={3} offset={0.8} id="projects">
             <Html center portal={domContent}>
               <Projects />
             </Html>
           </Block>
-          <Block factor={5} offset={8.2} id="contact">
+          <Block factor={5} offset={2.9} id="contact">
             <Html center portal={domContent}>
               <Contact />
             </Html>
           </Block>
+          </Suspense>
         </Canvas>
-      </Suspense>
+     
       <div
         className="scrollArea"
         ref={scrollArea}

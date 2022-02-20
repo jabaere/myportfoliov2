@@ -24,7 +24,7 @@ import DownloadButton from "../layout/downloadButton";
 
 const About = styled.div`
   width: 90vw;
-  margin-top: 250px;
+  height:10px
 `;
 
 const IconsContainer = styled.div`
