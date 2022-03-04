@@ -20,7 +20,7 @@ position: absolute;
 display: flex;
 justify-content: center;
 width: 100%;
-align-items: center;
+align-items: baseline;
 height: 10%;
 }
 
@@ -45,7 +45,7 @@ padding: 0;
 -ms-user-select: none;
 user-select: none;
 overflow: hidden;
-background-color: #121212;
+background-color: #1B1A17;
 display: block;
 }
 
@@ -96,14 +96,13 @@ h4 + p {
 }
 
 
-.loading{
- 
-  margin:20% auto;
-  height: 100vh;
+.progress{
+  font-family: 'Supermercado One', cursive;
+  margin:25% auto;
   width:100px;
 }
 .loading{
- 
+  
   margin:20% auto;
   height: 100vh;
   width:100px;

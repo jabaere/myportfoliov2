@@ -32,8 +32,8 @@ export default function ProjectCard({title,image,description,source,link}) {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small"><Link href={source} underline="none" target="_blank" rel="noopener">Source</Link></Button>
-        <Button size="small"><Link href={link} underline="none" target="_blank" rel="noopener">Demo</Link></Button>
+        {source && <Button size="small"><Link href={source} underline="none" target="_blank" rel="noopener">Source</Link></Button>}
+        {link && <Button size="small"><Link href={link} underline="none" target="_blank" rel="noopener">Demo</Link></Button>}
       </CardActions>
     </Card>
   );
